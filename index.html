@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GET Request</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Device Uptime</h1>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            $.get("http://localhost:3000/device/uptime", function(data, status) {
+                $("#result").html(data);
+            });
+        });
+    </script>
+</body>
+</html>
